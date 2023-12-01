@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">plzz like the video</p>
+    <p class="para">plzz share the video</p>
+    <p>dont forget to suscribe my channel</p>
+    <h1 id="heading">changed the content of the h1</h1>
+    <button onclick="changecontent()">click me</button>
+<p>
+     <label for="">male</label>
+     <input type="radio" name="gender">
+     <label for="">female</label>
+     <input type="radio" name="gender">
+     <label for="">male and female</label>
+     <input type="radio" name="gender">
+</p>
+    <script>
+        const changecontent=()=>{
+              document.getElementById("heading").innerHTML="yes changed";// it changes the content of the html element
+            
+              // we can also do this with the help of refernce
+
+              const heading1=document.getElementById("heading");
+              heading1.innerHTML="hello dear";
+
+             console.log( document.getElementsByClassName("para"));
+
+             console.log( document.getElementsByTagName('p'));
+            
+
+             console.log(document.getElementsByName('gender'));
+
+
+             document.querySelector('.para').innerHTML="baba baba black sheep"; // it only changes the first element where it matches 
+
+             console.log(document.querySelectorAll('.para'));// used to say how many such elements are present
+        }
+    </script>
+</body>
+</html>
