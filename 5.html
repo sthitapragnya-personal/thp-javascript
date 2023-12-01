@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 1st way -->
+    <p onclick="alert('hello iam sthita')">click here to show the name using alert()</p>
+    <p id="a" onclick="changingtext()">click here to call the function and change this text</p>
+
+    <p id="b">we will call the function my the help of annonymous function</p>
+
+    <p id="c">use of query selector and addEventListener/p>
+
+    <script>
+        // function changingtext() {
+        //     document.getElementById("a").innerHTML="text is changed";
+        //     alert("good morning mumbai");
+        // }
+
+        //2nd way
+        const changingtext=()=>{
+            document.getElementById("a").innerHTML="text is changed";
+             alert("good morning mumbai");
+        }
+        
+
+        //3rd way
+        const b=document.getElementById("b");
+        b.onclick= function(){
+            alert("good morning india");
+        }
+
+        b.onclick= function(){
+            console.log("good morning india");
+        }
+
+
+        //4th way
+        const c=document.querySelector('#c');
+        // now we will see the event listner
+        c.addEventListener('click',()=>{ //eithire click kale sie ei annonymous function ku call kariba , ame chahi thile eithi gote functiion ku bhi call karipari thante au sei function ta tale create bhi karipari thante
+            console.log("i love this way of writing");
+        });
+
+        c.addEventListener('click',()=>{ 
+            alert("i love this way of writing");
+        });
+        
+
+        // when alert is before console.log then only the console.log is performed
+
+        // but when alert is after console.log then both console.log and alert both occurs
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<p>click on the button t display the date after changing the hour</p>
+    <button onclick="myfunction()">try it</button>
+
+    <p id="demo"></p>
+
+    <p id="date"></p>
+    <p id="time"></p>
+    <script>
+        function myfunction() {
+            var t=new Date();
+            //document.getElementById("demo").innerHTML=t;
+            t.setHours(6);
+            document.getElementById("demo").innerHTML=t;
+            
+
+            var t1=new Date().toLocaleDateString();
+            var t2=new Date().toLocaleTimeString();
+            document.getElementById("date").innerHTML=t1;
+            document.getElementById("time").innerHTML=t2;
+        }
+
+        
+    </script>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
