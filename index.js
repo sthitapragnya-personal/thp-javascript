@@ -1358,34 +1358,26 @@
 // console.log(d.toLocaleString()); //1/5/2023, 12:00:00 am
 
 
-// 3rd method
+// last method
 //---------------
 //new Date(date string)
 
 // var d=new Date("October 13,2021,11:30:00");
-//console.log(d);
 // console.log(d.toLocaleString());//13/10/2021, 11:30:00 am
 
-
-//last method
-//-----------------
-//using the new Date(milliseconds);
-// var x= new Date();
-// console.log(Date.now());//1701411721904 // used to get the current time from starting till today in milliseconds 
-// var d=new Date(1701411693621);
-// console.log(d.toString()); //Fri Dec 01 2023 11:51:33 GMT+0530 (India Standard Time)
 
 
 //date methods()
 //---------------------
+
 // how to get the current date
 // that is get methods  
 // let curdate=new Date();
-// console.log(curdate.toLocaleString());//1/12/2023, 11:55:09 am // gives moth date + time 
-// console.log(curdate.getFullYear());//2023 // gives the year 
-// console.log(curdate.getMonth());//11 // gives the month
-// console.log(curdate.getDate());//1 // gives the date
-// console.log(curdate.getDay());//5 // gives the day
+// console.log(curdate.toLocaleString()); // gives moth date + time 
+// console.log(curdate.getFullYear());// gives the year 
+// console.log(curdate.getMonth()); // gives the month
+// console.log(curdate.getDate());// gives the date
+// console.log(curdate.getDay());// gives the day
 
 
 // how to set our own date
@@ -1399,7 +1391,7 @@
 //time methods()
 //---------------------
 // let curtime=new Date();
-// console.log(curtime.getTime()); // returns the total milliseconds till now since january 1 1970
+// console.log(curtime.getTime()); // gives only the time
 // console.log(curtime.getHours()); // gives the hour
 // console.log(curtime.getMinutes()); // gives the minutes
 // console.log(curtime.getSeconds());// gives the seconds
@@ -1430,74 +1422,35 @@
 //js Math Object
 //---------------
 
-// the math object allows you to perform the mathematical tasks on numbers
+// the math object allows you to perform yhe mathematical tasks on numbers
 
-// console.log(Math.PI); // gives the value of pi //3.141592653589793
+//console.log(Math.PI); // gives the value of pi //3.141592653589793
 
-// Math.round()
-// //it returns the value of x rounded to its nearest integer
+//Math.round()
+// it returns the value of x rounded to its nearest integer
 
-// let num=10.2565;
-// console.log(Math.round(num)); //10
-//  num=10.5;
-// console.log(Math.round(num)); //11
+//let num=10.2565;
+//console.log(Math.round(num)); //
+ //num=10.5;
+//console.log(Math.round(num)); //11
 
 // Math.pow()
-// //used to find the power
-// console.log(Math.pow(2,3));//8
+//used to find the power
+//console.log(Math.pow(2,3));//8
 
-// Math.sqrt()
-// //used to give the square root of a number
+//Math.sqrt()
+//used to give the square root of a number
 // console.log(Math.sqrt(16));//4
 // console.log(Math.sqrt(66));//8.12403840463596
 
 // Math.abs()
-// //converts the negative value to positive value
+// converts the negative value to positive value
 
 // console.log(Math.abs(-99));//99 
 // console.log(Math.abs(-89.7876)); //89.7876
 // console.log(Math.abs(2-4));//2
 
  // left space to cpmplete all the remaining math object methods from the notes
-
- //Math.ceil()
- //converts the decimal to the round successasive integer
-//  console.log(Math.ceil(4));//4
-//  console.log(Math.ceil(4.3));//4
-//  console.log(Math.ceil(4.7));//4
-//  console.log(Math.ceil(-2.3));//-2
-
-//Math.floor()
-//converts the decimal to the round preddesesive integer
-// console.log(Math.floor(4.1)); //4
-// console.log(Math.floor(-2.3));//-3
-
-
-// Math.max(); and Math.min()
-// console.log(Math.max(1,2,3,4,5,6,7,8));//8
-// console.log(Math.min(1,2,3,4,5,6,7,8));//1
-
-// Math.random
-//it gives decimal numbers between 0 and 1
-// console.log(Math.random()); //0.9889205814650082
-// console.log(Math.random()); //0.4889226557312836
-// console.log(Math.random()); //0.10288353000439154
-
-// console.log(Math.random()*10);//3.063432594866722
-// console.log(Math.random()*10);//9.92163950633062
-// console.log(Math.random()*10);//1.4561910500541742
-
-// console.log(Math.floor(Math.random()*10));//7
-// console.log(Math.floor(Math.random()*10));//0
-// console.log(Math.floor(Math.random()*10));//2
-
-//Math.trunc()
-//returns the only the integer part of a number , can be negative and can be positive
-// console.log(Math,trunc(4.1));//4
-// console.log(Math.trunc(-88.34));//-88
-
-//note:-> if the number is positive then Math.trunc() works like Math.floor()  and if the number is negative then the Math.trunc() is same as the Math.ceiling()
-
 
 
 //DOM in js
@@ -1506,7 +1459,6 @@
 
 
 // what we will do 
-//------------------
 // Window vs Documnet
 // DOM vs BOM
 //DOM Navigation
@@ -1543,10 +1495,14 @@
 
 
  // use thsi code in console by copy paste
-//  alert(location.href);//shows the current url
-//  if (confirm("want to visit sthita website ? ")) {
-//    location.href="https://www.google.com"; // redirects to google page 
-//  }
+ //the functions alert/promt/confirm are the part of BOM
+ //they are directly not related to the DOM
+ //but they represent pure browser methods of communiting with the user.
+
+ alert(location.href);//shows the current url
+ if (confirm("want to visit sthita website ? ")) {
+   location.href="https://www.google.com"; // redirects to google page 
+ }
 
 
 //DOM Navigation
@@ -1593,12 +1549,14 @@
 
 // how to search the elements and the references 
 // we will see the new file
+// refer for 4.html for this
 
 
 //interview question
 //---------------------
 
 // what is the difference and the similarities between document .getElementById and document.querySelector
+// by the help of .getElementById we get the element that has a unique id but with the help of the .querySelector() we can access the elements through id,class,name,tag, etc ---->doubt
 
 
 //js events
