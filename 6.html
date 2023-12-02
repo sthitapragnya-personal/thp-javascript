@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+           Lorem ipsum dolor sit amet consectetur adipisicing 
+        </div>
+        <a href="#" class="button" id="fourthway">
+            Event Listners
+        </a>
+    </div>
+    <script>
+        const fourthway= document.getElementById('fourthway');
+        const checkevent=()=>{
+            alert("checkevent function is called")
+            console.log(event);
+            console.log(event.type);
+            console.log(event.target);
+        }
+        fourthway.addEventListener("click",checkevent());
+
+    </script>
+</body>
+</html>
