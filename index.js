@@ -1495,10 +1495,14 @@
 
 
  // use thsi code in console by copy paste
-//  alert(location.href);//shows the current url
-//  if (confirm("want to visit sthita website ? ")) {
-//    location.href="https://www.google.com"; // redirects to google page 
-//  }
+ //the functions alert/promt/confirm are the part of BOM
+ //they are directly not related to the DOM
+ //but they represent pure browser methods of communiting with the user.
+
+ alert(location.href);//shows the current url
+ if (confirm("want to visit sthita website ? ")) {
+   location.href="https://www.google.com"; // redirects to google page 
+ }
 
 
 //DOM Navigation
@@ -1545,12 +1549,14 @@
 
 // how to search the elements and the references 
 // we will see the new file
+// refer for 4.html for this
 
 
 //interview question
 //---------------------
 
 // what is the difference and the similarities between document .getElementById and document.querySelector
+// by the help of .getElementById we get the element that has a unique id but with the help of the .querySelector() we can access the elements through id,class,name,tag, etc ---->doubt 
 
 
 //js events
