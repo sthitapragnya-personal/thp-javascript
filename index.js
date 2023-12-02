@@ -1599,8 +1599,41 @@
 
 
 
+//js event objects
+//----------------------
+ //note : Event object is the parent of the event object
+    
 
+//js objects
+//-------------
+/**** Section 7👉 Objects in JavaScript ****/
+// A JavaScript object is a collection of properties and values.
+// It is an unordered set of data values, which are stored as name / value pairs.
+// The following example shows how to create an empty object called person:
+var person = {};
+console.log(person);
+// You can add new properties to this object by assigning them key names. For example:
+person.name = 'John';
+person.age = 20;
+person.city = 'New York';
+console.log(person);
+// To access these properties, use dot notation like so:
+console.log('Name:', person.name);
+console.log('Age:', person.age);
+console.log('City:', person.city);
+// If the desired property does not exist, accessing it will return undefined.
+console.log('Does John live in New York?', person.city == 'New York');
+// You can also delete properties from an object. Here we remove the age property:
+delete person.age;
+console.log(person);
+// However, if there is no such property, nothing happens.
+delete person.address;
+// You can check whether a specific property exists or not using the hasOwnProperty() method:
+if (person.hasOwnProperty('age')) {
+  console.log("The 'age' property exists.");
+  } else {
+    console.log("The 'age' property doesn't exist.")
+    }
+    //-------------------------------------------
 
-
-//js events
-//---------
+   
