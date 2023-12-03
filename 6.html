@@ -11,18 +11,20 @@
            Lorem ipsum dolor sit amet consectetur adipisicing 
         </div>
         <a href="#" class="button" id="fourthway">
-            Event Listners
+            <span class="span">
+                Event Listners
+            </span>
         </a>
     </div>
     <script>
         const fourthway= document.getElementById('fourthway');
-        const checkevent=()=>{
+        const checkevent = () => {
             alert("checkevent function is called")
             console.log(event);
             console.log(event.type);
             console.log(event.target);
         }
-        fourthway.addEventListener("click",checkevent());
+        fourthway.addEventListener("click",checkevent);
 
     </script>
 </body>

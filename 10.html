@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="">enter your name</label>
+            <input type="text" id="ice">
+            <br>
+            <label for="">choose your icecream flavour
+            <select name="" id="icecreams" onchange="selectelement()">
+                <option value="select one">select one</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="cookies and creme">Cookies and Creme</option>
+            </select>
+        </label>
+        <br>
+        <div id="result">
+            
+        </div>
+        </div>
+    </div>
+
+    <script>
+        // const selectelement=()=>{
+        //     const ice = document.getElementById("ice").value;
+
+        //     const icecreams= document.getElementById("icecreams").value;
+        //       // note : in case of input tag we need to use the .value to get the value but yes if it would have been a text then we could have used the .innerHTML to get the value
+
+        //     console.log(`the name is ${ice} and the icecream is ${icecreams}`);
+
+
+        //     const result = document.getElementById('result').innerHTML = `the name is ${ice} and the icecream is ${icecreams}`;
+        // }
+
+
+        // or else we can also do the same thing by using the refernce concept that is  we can use the addEventListner
+        //------------------------------------------------------
+        const icecreams = document.getElementById("icecreams");
+
+        icecreams.addEventListener('change',()=>{
+            const ice = document.getElementById("ice").value;
+            const icecreams = document.getElementById("icecreams").value;
+            const result= document.getElementById("result").innerHTML= `the name is ${ice} and the icecream is ${icecreams}`;
+        });
+
+    </script>
+</body>
+</html>

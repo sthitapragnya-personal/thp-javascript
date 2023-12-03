@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div>
+            we will be seeing the differnce between the onclick and the addEventListner
+        </div>
+        <br>
+        <button id="onclick">on click </button>
+        <br><br>
+        <button id="addeventlistner">add event listner</button>
+    </center>
+
+    <script>
+        // using onclick
+        //-------------------
+        const x=document.getElementById("onclick");
+        x.onclick = function(){
+            alert("onclick is used for the first time");
+        }
+        x.onclick = function(){
+            alert("onclick is used for the second time");
+        }
+
+        //using add event listners
+        //--------------------------
+        const y= document.getElementById("addeventlistner");
+
+        y.addEventListener('click',()=>{
+            alert("event listener is used for the first time");
+        });
+        
+        const function_2=()=>{
+            console.log("event listner is used for the second time");
+        }
+
+        y.addEventListener('click',function_2);
+
+    </script>
+</body>
+</html>

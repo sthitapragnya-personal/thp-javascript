@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-div">
+        <div>
+            <p>can you stop me when i reached at 5 !!</p>
+            <br>
+            <p id="showmyname"></p>
+            <button id="btn"> click here to start</button>
+            <button id="btn1"> click here to stop</button>
+        </div>
+    </div>
+
+    <script>
+          const showmyname= document.querySelector("#showmyname");
+        const btn = document.querySelector("#btn");
+        const btn1 = document.querySelector("#btn1");
+        let num=0;
+        let timeref;
+
+        const x=()=>{
+            showmyname.innerHTML="Loading......"
+            timeref=setInterval(()=>{
+                showmyname.innerHTML=`${num}`;
+                num++;
+            },1000);
+        }
+
+        btn.addEventListener('click',x);
+        btn1.addEventListener('click',()=>{
+            clearInterval(timeref);
+        });
+
+    </script>
+</body>
+</html>
