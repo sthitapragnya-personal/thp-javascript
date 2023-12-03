@@ -1499,10 +1499,10 @@
  //they are directly not related to the DOM
  //but they represent pure browser methods of communiting with the user.
 
- alert(location.href);//shows the current url
- if (confirm("want to visit sthita website ? ")) {
-   location.href="https://www.google.com"; // redirects to google page 
- }
+//  alert(location.href);//shows the current url
+//  if (confirm("want to visit sthita website ? ")) {
+//    location.href="https://www.google.com"; // redirects to google page 
+//  }
 
 
 //DOM Navigation
@@ -1602,38 +1602,264 @@
 //js event objects
 //----------------------
  //note : Event object is the parent of the event object
-    
+ // refer to 6.html
+
+ //what is mouse event in js
+ //----------------------------------
+//  the events that are related to mouse , the events that occurs when the mouse interacts with the HTML
+//refer to 7.html 
+//next refer to 8.html
+// doubt 8.html is not working
+
+
+// what is keyboard events in js
+//--------------------------------
+//  the events that are related to keyboards , the events that occur when we press any keys
+//events that occur when the user press any key on the keyboard
+//belongs to the keyboard event object
+// refer to 9.html
+
+// what are input events in js
+//--------------------------------
+//  the events that are related to text fields or inputs
+//the events that occur when the value of an input changes
+//refer to 10.html
+
+//what is the differnce between onclick and addEventListner ?
+//--------------------------------------------------------------
+//refer 11.html for this
+
+//conclusion :
+//addEventListner does not overwrites the existing event handlers, but the onclick overwrites the existing onclick = event handlers
+
+
+//what is timing based events in js
+//----------------------------------
+//  the events that are triggered at specific intervals of time
+// window object allows execution of code at specified time intervals
+
+//these time intervals are called as the timing events
+
+// the 2 key methods that are used here are :
+
+//1. setTimeout(function,milliseconds)
+// this executes a function after waiting for a specified number of milliseconds
+
+//2. setInterval(function,milliseconds)
+//this is same as the setTimeout() but it repeats the execution of the function contineously
+
+// there are basically 4 methods that we use:
+//setTimeout()
+//setInterval()
+//clearTimeout()
+//clearInterval()
+
+//setTimeout()
+//-------------
+//refer 12.html
+//refer 13.html
+
+//clearTimeout()
+//---------------
+//refer 14.html
+
+
+//setInterval() 
+//-------------
+//refer 15.html
+
+
+//cleraInterval()
+//--------------------
+//refer16.html
+
+
+//what is the differnce between the setTimeout() and setInterval()
+//-----------------------------------------------------------
+
+//already done
+
+
+
+//OOPS is js
+//------------
+//what is object literals
+//what is "this" objects
+
+//what is object literals
+//------------------------
+//object literal is simply a key value pair data structure
+//storing the variables and functions together in one container and this container can be refered as the object
+
+//how to create object :
+//it can be done by 2 ways:
+
+// 1st way
+//------------
+// let biodata="thapa";
+// console.log(biodata);
+
+
+// let biodata={
+//   myname : "sthita",
+//   myage : 21,
+//   getdata : function(){ //here getdata() acts as a function
+//     console.log(`my name is ${biodata.myname} and my age is ${biodata.myage}`);
+//   }
+// }
+
+// console.log(biodata.myname+"  "+biodata.myage); //sthita  21
+// biodata.getdata(); //my name is sthita and my age is 21
+
+
+
+//2nd way to write the objects and the function inside the object 
+//----------------------------------------------------
+// let biodata={
+//   myname : "sthita",
+//   myage : 21,
+//   getdata (){ //here getdata() acts as a function
+//     console.log(`my name is ${biodata.myname} and my age is ${biodata.myage}`);
+//   }
+// }
+
+// biodata.getdata(); //my name is sthita and my age is 21
+
+
+//what if we want to add a object inside a object
+//------------------------------------------------
+// let biodata = {
+//   myname: {
+//     firstname : "sthitapragnya",
+//     lastname : "sahoo"
+//   },
+//   myage : 21,
+//   getdata (){
+//       console.log(biodata.myname.firstname+" "+biodata.myname.lastname+" "+biodata.myage);
+//   }
+// }
+
+// biodata.getdata();
+
+
+//what is "this" object
+//------------------------
+// the defination of the "this" object is that it contains the current context.
+
+//this object can have different values depending uopn where it is placed
+
+// example 1
+//---------------
+// console.log(this); // run this command in the console to have a better understanding 
+//console.log(this.alert("awsomeee buddy"));
+
+
+//example 2
+//-----------
+// function name(){
+//   console.log(this);
+// }
+//name(); //function is called here
+
+
+//example 3
+//------------
+// let name="sthita";
+// function seename(){
+//   console.log(this.name); 
+// }
+//seename(); //gives no output if we use let 
+
+// var name="sthita";
+// function seename(){
+//   console.log(this.name); 
+// }
+//seename();//sthita -> gives output as we have var instead of let 
+
+
+//example 4
+//------------
+// const obj={
+//   myname:"sthita",
+//   myage :21,
+//   myfun(){
+//     console.log(this);
+//   }
+// }
+// obj.myfun();
+
+
+//example 5
+//------------
+// const obj={
+//   myname:"sthita",
+//   myage :21,
+//   myfun(){
+//     console.log(this.myname);
+//   }
+// }
+// obj.myfun();//sthita
+
+//note : when we mention "this" inside a object then the current context of that "this" from windows to the current object
+// note : the above conclusion will not work if we are using object but using the "this" inside a fat arrow function , in that case the current context will not be the object rather it will be the window. And this thing we will conclude from the next example 
+
+//example 6
+//----------
+// const obj={
+//   myname:"sthita",
+//   myage :21,
+//   myfun: ()=>{
+//     console.log(this);
+//   }
+// }
+// obj.myfun();
+
+
+//what will the output of the bellow code:
+//----------------------------------------
+// let biodata = {
+//   myname : {
+//     realname : "sthitapragnya",
+//     homename : "shubham"
+//   },
+//   myage :26,
+//   getdata(){
+//     console.log(`my real name is ${this.myname.realname} and my home name is ${this.myname.homename} and my age is ${biodata.myage}`);
+//   }
+// }
+// biodata.getdata(); //my real name is sthitapragnya and my home name is shubham and my age is 26
+
+
 
 //js objects
 //-------------
 /**** Section 7👉 Objects in JavaScript ****/
 // A JavaScript object is a collection of properties and values.
 // It is an unordered set of data values, which are stored as name / value pairs.
-// The following example shows how to create an empty object called person:
-var person = {};
-console.log(person);
-// You can add new properties to this object by assigning them key names. For example:
-person.name = 'John';
-person.age = 20;
-person.city = 'New York';
-console.log(person);
-// To access these properties, use dot notation like so:
-console.log('Name:', person.name);
-console.log('Age:', person.age);
-console.log('City:', person.city);
-// If the desired property does not exist, accessing it will return undefined.
-console.log('Does John live in New York?', person.city == 'New York');
-// You can also delete properties from an object. Here we remove the age property:
-delete person.age;
-console.log(person);
-// However, if there is no such property, nothing happens.
-delete person.address;
-// You can check whether a specific property exists or not using the hasOwnProperty() method:
-if (person.hasOwnProperty('age')) {
-  console.log("The 'age' property exists.");
-  } else {
-    console.log("The 'age' property doesn't exist.")
-    }
-    //-------------------------------------------
+// // The following example shows how to create an empty object called person:
+// var person = {};
+// console.log(person);
+// // You can add new properties to this object by assigning them key names. For example:
+// person.name = 'John';
+// person.age = 20;
+// person.city = 'New York';
+// console.log(person);
+// // To access these properties, use dot notation like so:
+// console.log('Name:', person.name);
+// console.log('Age:', person.age);
+// console.log('City:', person.city);
+// // If the desired property does not exist, accessing it will return undefined.
+// console.log('Does John live in New York?', person.city == 'New York');
+// // You can also delete properties from an object. Here we remove the age property:
+// delete person.age;
+// console.log(person);
+// // However, if there is no such property, nothing happens.
+// delete person.address;
+// // You can check whether a specific property exists or not using the hasOwnProperty() method:
+// if (person.hasOwnProperty('age')) {
+//   console.log("The 'age' property exists.");
+//   } else {
+//     console.log("The 'age' property doesn't exist.")
+//     }
 
    

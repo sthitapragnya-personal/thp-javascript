@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hello">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, autem repudiandae consequuntur nesciunt deserunt quam, culpa dolores, adipisci ducimus labore minus! Sit placeat veritatis maiores, ea quos tempore temporibus vel?
+    </div>
+
+    <script>
+        const x=document.getElementById("hello");
+
+        x.addEventListner("mouseenter",()=>{
+            console.log("mouse enter");
+            x.style.backgroundColor = "blue";
+        });
+        x.addEventListener("mouseleave",()=>{
+            console.log("mouse leave");
+            x.style.backgroundColor = "yellow";
+        });
+    </script>
+</body>
+</html>
