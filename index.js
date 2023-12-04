@@ -1863,3 +1863,213 @@
 //     }
 
    
+
+//js ECMAScript 2016/ES7
+//--------------------------
+// 1.let and const
+// 2.template strings
+// 3.default arguments
+// 4.rest operators
+// 5.destructuring
+// 6.object properties
+// 7.arrow function
+// 8.spread operators
+ 
+
+//destructuring in ES6
+// there are 2 types of destructuring :
+// 1. array destructuring and 2. object destructuring
+
+
+//see if i have a array and i want to have all the elements of the array separately :
+
+// const mybiodata=['sthita','sahoo',21];
+// let myfirstname=mybiodata[0];
+// let mylastname=mybiodata[1];
+// let myage=mybiodata[2];
+// console.log(`My name is ${myfirstname} ${mylastname}. I am ${myage} years old.`); //My name is sthita sahoo. I am 21 years old.
+
+// but yes if the number of elemnts in the array increase a lot like lets say 100 or 1000 then it will be very difficult like to create 100 or 1000 variables so the better way is to use the array destructuring.
+
+// array destructuring use:
+// const mybiodata=['sthita','sahoo',21];
+// let[fname,lname,age]=mybiodata;
+// console.log(`My name is ${fname} ${lname}. I am ${age} years old.`); //My name is sthita sahoo. I am 21 years old.
+
+// note : here order matters.
+// const mybiodata=['sthita','sahoo',21];
+// let[fname,age,lname]=mybiodata;
+// console.log(`My name is ${fname} ${lname}. I am ${age} years old.`); //My name is sthita 21. I am sahoo years old.
+
+
+// here iam adding a new element that is degree
+// const mybiodata=['sthita','sahoo',21];
+// let[fname,lname,age,degree="b.tech"]=mybiodata;
+// console.log(fname+" "+lname+" "+age+" "+degree); //sthita sahoo 21 b.tech
+
+//similarly there is object destructuring
+//----------------------------------------
+// const mybiodata = {
+//       myfname:"sthita",
+//       mylname:"sahoo",
+//       myage:21
+// }
+// let age=mybiodata.myage;
+// let fname=mybiodata.myfname;
+// let lname=mybiodata.mylname;
+// console.log(fname+" "+lname+" "+age); //sthita sahoo 21
+
+
+// yes but if the number of key value pairs are large in number then we need to use the object destructuring
+
+// const mybiodata = {
+//       myfname:"sthita",
+//       mylname:"sahoo",
+//       myage:21
+// }
+// let{fname,lname,age,degree="b.tech"}=mybiodata;
+// console.log(fname+" "+lname+" "+age+" "+degree);//undefined undefined undefined b.tech
+
+
+// const mybiodata = {
+//    myfname:"sthita",
+//    mylname:"sahoo",
+//    myage:21
+// }
+// let{myfname,mylname,myage,degree="b.tech"}=mybiodata;
+// console.log(myfname+" "+mylname+" "+myage+" "+degree);//sthita sahoo 21 b.tech
+
+
+//note : in the case of object destructuring the name of the keys and the name of the variables to which you assign the values of the keys should be same
+
+//object properties in js
+//-------------------------
+//we can now use dynamic properties
+
+// let myname="sthita";
+// const mybio={
+//    myname : "how are you",
+//    26 : "is my age"
+// }
+// console.log(mybio);//{ '26': 'is my age', myname: 'how are you' }
+
+  
+// now we will add dynamic key in the above example
+// that we are going to get teh dynamic data in an object
+// so we will use square bracket
+//----------------------------------
+// let myname="sthita";
+// const mybio={
+//    [myname] : "how are you",
+//    [20+6] : "is my age"
+// }
+// console.log(mybio);//{ '26': 'is my age', sthita: 'how are you' }
+
+
+//note : no need to write key and value if the name of the key and value are same ,
+// let myname = "sthita";
+// let myage = 26;
+// const mybio = {
+//    myname : myname,
+//    myage : myage
+// } 
+// console.log(mybio.myname+" "+mybio.myage); //sthita 26
+
+//note : no need to write key and value if the name of the key and value are same ,
+// let myname = "sthita";
+// let myage = 26;
+// const mybio = {
+//    myname,
+//    myage
+// } 
+// const mybio={myname,myage}
+// console.log(mybio.myname+" "+mybio.myage);//sthita 26
+
+
+//what is spread operators
+//----------------------------
+// const colors=['red','green','blue','white'];
+// //but then i realised that i need to add 2 more elements in the array
+// const mycolors=['red','green','blue','white','yellow','black'];
+// // so actually we need to use the do not repeat concept
+// const favcolors=[...mycolors,'yellow','black'];
+// console.log(favcolors); //[
+//    'red',    'green',
+//    'blue',   'white',
+//    'yellow', 'black',
+//    'yellow', 'black'
+//  ]
+
+//ECMAScript 2016/ES7
+//------------------------
+//1.prototype.array.includes
+//2.exponential operator
+
+
+//prototype.array.includes
+//----------------------------
+// const colors=['red','green','blue','white'];
+// var ispresent= colors.includes('purple');
+// console.log(ispresent);//false
+// var ispresent= colors.includes('red');
+// console.log(ispresent);//true
+
+
+//exponential operator (**)
+//--------------------------
+// console.log(2**3);//8
+
+
+//ECMAScript 2017/ES8
+//---------------------
+// String padding
+// Object.values()
+// Object.entries()
+
+// const message="my name is sthita";
+// console.log(message);//my name is sthita
+// console.log(message.padStart(5));//my name is sthita
+// console.log(message.padEnd(10));//my name is sthita
+
+const x="sthita";
+x.padStart(10);
+console.log(x);//sthita
+
+const p=x.padStart(10);//    sthita
+console.log(p);
+
+//note : padStart and padEnd means it will give a padding of blanck characters at the start and at the end of a string
+// better check this is the console for better understanding
+
+
+//object.values() and object.entires()
+//--------------------------------------
+// const person={
+//    name: "sthita",
+//    age : 26
+// }
+// console.log(Object.values(person));//[ 'sthita', 26 ]
+// console.log(Object.keys(person));//[ 'name', 'age' ]
+// console.log(Object.entries(person));//[ [ 'name', 'sthita' ], [ 'age', 26 ] ]
+
+
+//note :async await we will cover in the advance java script
+
+// ECMAScript 2018
+// ----------------
+//Rest and spread properties
+//-----------------------
+// the spread property helps to create a new object by using other object/objects
+// const person={
+//    name: "sthita",
+//    age : 26
+// }
+// const y={...person,degree:"b.tech"}
+// console.log(person);//{ name: 'sthita', age: 26 }
+// console.log(y);//{ name: 'sthita', age: 26, degree: 'b.tech' }
+
+
+//ECMAScript 2019/ES2019
+//------------------------
+//how to flattern an array
+//--------------------
