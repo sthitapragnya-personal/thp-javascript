@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    confirm box
+    -------------------------
+    a confirmation dialog box is mostly used to take the user'd permission or any option. it displays a dialog box with two buttons: OK and Cancel
+
+    If the user clicks on the Ok button, the window method confirm() will return true. If the user clicks on the Cancel button , then confirm() returns false. -->
+    <button id="click">
+        click here 
+    </button>
+</body>
+<script>
+    function myfun(){
+        var userconfirmation=confirm("do you want to visit the website ");
+        if (userconfirmation==true) {
+            window.open("https://www.google.com")// it redirects from one page to another page
+        }
+        else{
+            alert ("you clicked cancel button");
+        }
+    }
+    document.querySelector("#click").addEventListener('click',myfun); // note : in the caes of the addEventListner if we are using a predefined funcion then we just need to give the function name or the function refernce we don't need to call it .
+   
+</script>
+</html>

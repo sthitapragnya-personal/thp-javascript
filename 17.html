@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+        }
+        #parent{
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+            background-color: green;
+        }
+        #child{
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const x=()=>{
+        alert("parent box os clicked")
+        console.log("parent box os clicked");
+        // lets say we want to stop the process of prpagation then we can use the stoppropagation() technique
+        // event.stopPropagation()
+    }
+    const y=function(){
+         alert("child box os clicked")
+        console.log("child box os clicked");
+        // lets say we want to stop the process of prpagation then we can use the stoppropagation() technique
+        // event.stopPropagation()
+    }
+    // here if we dont write any third parameter then by default it is false that is event bubbling , means it propagates from inside element to the outside element
+    // document.querySelector("#parent").addEventListener('click',x)
+    // document.querySelector("#child").addEventListener('click',y)
+
+
+//-----------------------------------------------------------------
+
+
+    // here if we write the third parameter as false then it is event bubbling , means it propagates from inside element to the outside element
+    // document.querySelector("#parent").addEventListener('click',x,false)
+    // document.querySelector("#child").addEventListener('click',y,false)
+    
+
+//-----------------------------------------------------------------
+
+
+
+    // here if we write the third parameter as true then it is event capturing , means it propagates from outside element to the inside element
+    document.querySelector("#parent").addEventListener('click',x,true)
+    document.querySelector("#child").addEventListener('click',y,true)
+    
+
+//-----------------------------------------------------------------
+
+</script>
+</html>
+<!-- 
+ also refer to 18.html for another example of event propagation -->

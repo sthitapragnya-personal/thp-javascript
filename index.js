@@ -1955,7 +1955,7 @@
 
   
 // now we will add dynamic key in the above example
-// that we are going to get teh dynamic data in an object
+// that we are going to get the dynamic data in an object
 // so we will use square bracket
 //----------------------------------
 // let myname="sthita";
@@ -2031,12 +2031,12 @@
 // console.log(message.padStart(5));//my name is sthita
 // console.log(message.padEnd(10));//my name is sthita
 
-const x="sthita";
-x.padStart(10);
-console.log(x);//sthita
+// const x="sthita";
+// x.padStart(10);
+// console.log(x);//sthita
 
-const p=x.padStart(10);//    sthita
-console.log(p);
+// const p=x.padStart(10);//    sthita
+// console.log(p);
 
 //note : padStart and padEnd means it will give a padding of blanck characters at the start and at the end of a string
 // better check this is the console for better understanding
@@ -2073,3 +2073,106 @@ console.log(p);
 //------------------------
 //how to flattern an array
 //--------------------
+// const arr=[
+//    [1,2],
+//    [3,4,5],
+//    [6,[7,8]]
+// ]
+// let flatarr=arr.reduce((accum,currval,array)=>{
+//    return accum.concat(currval)
+// })
+// console.log(flatarr);//[ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ] issue is that it is not getting into a single 1-d array
+// // and in order to solve the above issue we need flat method
+// console.log(arr.flat());//[ 1, 2, 3, 4, 5, 6, [ 7, 8 ] ]  // here it bydefault flatterns upto 1 level we can put it as 1 or 2 or 3 or ... infinity -> and this defines the level upto which we want to flattern the array
+// console.log(arr.flat(Infinity));
+// // [
+// //    1, 2, 3, 4,
+// //    5, 6, 7, 8
+// //  ]
+
+//similarly we have the flatMap
+
+//Object.fromEntries()
+//-----------------------
+// const person={
+//    name: "sthita",
+//    age : 26
+// }
+// console.log(Object.entries(person));//[ [ 'name', 'sthita' ], [ 'age', 26 ] ]
+// const x=Object.entries(person)
+// console.log(x);//[ [ 'name', 'sthita' ], [ 'age', 26 ] ]
+// // now we have converted the entries of an object to indivisual arrays , but if we want to convert them back to as a whole single object then we need to use the Object.fromEntries()
+// console.log(Object.fromEntries(x));//{ name: 'sthita', age: 26 }
+
+
+//String.trimStart()  and String.trimEnd()
+//-----------------------------------------
+//we have alreafy seen them rthey are used to trim the spaces from the start and the end respectively
+
+
+//EcmaScript2020 / ES2020
+//-----------------------------
+
+//1. BigInt
+//-----------------
+// let num1=Number.MAX_SAFE_INTEGER
+// console.log(num1);//9007199254740991
+// console.log(num1+12); // here we cannot get the right value and the system starts to break , means it is very tuff to do the operations on the MAX_SAFE_INTERGER
+// so in order to get the correct values we need to use the BigInt that is we need to just add a n at the end of the numbern and then perform operations with it to get the right value
+// console.log(9007199254740991n+222n);//9007199254741213n
+// const num2=9007199254741213n
+// console.log(typeof num2);//bigint
+
+
+//2.Nullish Coalescing -> what is does is that it basically compares to variables or 2 parts then if the first part is a falsy value then it return sthe second value , but if the first part is truthy value then it returns the first part only
+//-------------------------------------------------------------------------
+// const word1=null??"hello"
+// const word2="hi"??"bye"
+// console.log(word1+" , "+word2);//hello , hi
+
+
+
+//ES2014
+//----------
+// x=3.14
+// console.log(x);//3.14
+
+// //-----------------
+
+// "use strict"
+// y=4
+// console.log(y);//error
+// const yy=4
+// console.log(y);//4
+
+
+
+//advance javascript part-1
+//---------------------------
+//event propagation -> event bubbling and event capturing
+//---------------------------------------------------------
+// note : capturing is also called as trickling
+//refer to 17.html and then refer to 18.html
+
+
+
+//javascript dialog boxes
+//---------------------------
+// it has 3 parts -> Alert , Prompt , Confirmation 
+//promt box -> refer 19.html
+//confirm box -> refer 20.html
+
+
+//setInterval() and clearInterval() method in jsand dynamic clock in js
+//---------------------------------------------------------
+//refer to 21.html
+
+//eval() function anmaking of a calculator app using the eval()
+//---------------------------------------------------------------
+console.log(eval("2+2*4/2"))
+console.log(eval(2**3));
+//refer to 22.html for the calculator app
+
+//what is higher order function and what is callback function
+//--------------------------------------------------------------
+

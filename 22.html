@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        #main{
+            width: vw;
+            height: 100vh;
+            background-color: slateblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #calc{
+            width: 40%;
+            height: 80%;
+            background-color: greenyellow;
+            box-shadow: 2px 2px 2px 2px grey;
+        }
+        .result,.row1,.row2,.row3,.row4{
+            width: 100%;
+            height: 20%;
+        }
+        .result{
+            width: 100%;
+            height: 20%;
+            background-color: brown;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .row1{
+            width: 100%;
+            height: 20%;
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .row2{
+            width: 100%;
+            height: 20%;
+            background-color: orange;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .row3{
+            width: 100%;
+            height: 20%;
+            background-color: red;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .row4{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: green;
+        }
+        .box11,.box12,.box13,.box14{
+            width: 20%;
+            height: 90%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box21,.box22,.box23,.box24{
+            width: 20%;
+            height: 90%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box31,.box32,.box33,.box34{
+            width: 20%;
+            height: 90%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box41,.box42,.box43,.box44{
+            width: 20%;
+            height: 90%;
+            background-color: indianred;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .key{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .result2{
+            background-color: antiquewhite;
+            width: 95%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="main">
+        <div id="calc">
+            <div class="result">
+                <div class="result2">
+
+                </div>
+            </div>
+            <div class="row1">
+                <div class="box11">
+                    <div class="key1 key">
+                        1
+                    </div>
+                </div>
+                <div class="box12">
+                    <div class="key2  key">
+                        2
+                    </div>
+                </div>
+                <div class="box13">
+                    <div class="key3  key">
+                        3
+                    </div>
+                </div>
+                <div class="box14">
+                    <div class="keyadd  key">
+                        +
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="box21">
+                    <div class="key4  key">
+                        4
+                    </div>
+                </div>
+                <div class="box22">
+                    <div class="key5  key">
+                        5
+                    </div>
+                </div>
+                <div class="box23">
+                    <div class="key6  key">
+                        6
+                    </div>
+                </div>
+                <div class="box24">
+                    <div class="keysub  key">
+                        -
+                    </div>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="box31">
+                    <div class="key7  key">
+                        7
+                    </div>
+                </div>
+                <div class="box32">
+                    <div class="key8  key">
+                        8
+                    </div>
+                </div>
+                <div class="box33">
+                    <div class="key9 key">
+                        9
+                    </div>
+                </div>
+                <div class="box34">
+                    <div class="keymul key">
+                        *
+                    </div>
+                </div>
+            </div>
+            <div class="row4">
+                <div class="box41">
+                    <div class="keyclear key" style="font-size: 15px;">
+                        CLEAR <br>RESULT
+                    </div>
+                </div>
+                <div class="box42">
+                    <div class="key0 key">
+                        0
+                    </div>
+                </div>
+                <div class="box43">
+                    <div class="keyequals key">
+                        =
+                    </div>
+                </div>
+                <div class="box44">
+                    <div class="keydiv key">
+                        /
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let result=""
+    console.log("result = "+result);
+    document.querySelector(".key1").addEventListener('click',function(e){
+        result=result+"1"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key2").addEventListener('click',function(e){
+        result=result+"2"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key3").addEventListener('click',function(e){
+        result=result+"3"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key4").addEventListener('click',function(e){
+        result=result+"4"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key5").addEventListener('click',function(e){
+        result=result+"5"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key6").addEventListener('click',function(e){
+        result=result+"6"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key7").addEventListener('click',function(e){
+        result=result+"7"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key8").addEventListener('click',function(e){
+        result=result+"8"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key9").addEventListener('click',function(e){
+        result=result+"9"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".key0").addEventListener('click',function(e){
+        result=result+"0"
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".keyadd").addEventListener('click',function(e){
+        if(result[result.length-1]=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"){
+            result=result+"+"
+        }
+        else{
+            console.log("invalid input");
+        }
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".keysub").addEventListener('click',function(e){
+        if(result[result.length-1]=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"){
+            result=result+"-"
+        }
+        else{
+            console.log("invalid input");
+        }
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".keymul").addEventListener('click',function(e){
+        if(result[result.length-1]=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"){
+            result=result+"*"
+        }
+        else{
+            console.log("invalid input");
+        }
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".keydiv").addEventListener('click',function(e){
+        if(result[result.length-1]=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"){
+            result=result+"/"
+        }
+        else{
+            console.log("invalid input");
+        }
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=result
+    })
+    document.querySelector(".keyclear").addEventListener('click',function(e){
+        result=""
+        console.log("result = "+result);
+        document.querySelector(".result2").innerHTML=""
+    })
+    document.querySelector(".keyequals").addEventListener('click',function(e){
+        if(result[result.length-1]=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"){
+            console.log("result = "+result);
+            const output=eval(result)
+            document.querySelector(".result2").innerHTML=output
+            result=output
+            console.log("output = "+output);
+        }
+        else{
+            console.log("invalid input");
+        }
+       
+    })
+</script>
+</html>

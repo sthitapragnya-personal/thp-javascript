@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="stop">
+        stop
+    </button>
+    <button id="start">
+        start
+    </button>
+    <br>
+    <br><br><br>
+    <div id="result" style="font-size: 60px;">
+        
+    </div>
+</body>
+<script>
+    let x;
+    let date;
+    document.querySelector("#start").addEventListener('click',function(e){
+         x=setInterval(function(){
+            date=new Date()
+            date=date.toLocaleTimeString()
+            document.querySelector("#result").innerHTML=`${date}`
+         },1000)
+    })
+    document.querySelector("#stop").addEventListener('click',function(e){
+        clearInterval(x);
+    })
+</script>
+</html>
