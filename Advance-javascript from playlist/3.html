@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var globalEC="added"
+    function a(){
+        var fa="2nd function is added"
+        console.log(fa);
+        debugger
+        b()
+        console.log("lets see when i will be on console.");
+    }
+    function b(){
+        debugger
+        console.log("2nd function o/p2");
+        c()
+    }
+    function c(){
+        debugger
+        console.log("3rd function o/p3");
+    }
+    debugger
+    a() // a is called
+</script>
+</html>
+
+ <!-- open this is libvev server and then go to inspect -> console -> source select 3.html -> run it -> and go to next steps one by one using the debugger and observe the call stack to see how the execution stack works -->
