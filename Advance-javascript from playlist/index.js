@@ -19,6 +19,11 @@
 //refer to 4.html 
 
 
-// function hoisting in js
+//hoisting in js
 //-----------------------------
-// refer to 
+// refer to 4a.png and 4b.png
+
+
+//function hoisting in js -> practical
+//------------------------------
+// refer to 5.html
